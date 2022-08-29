@@ -91,11 +91,7 @@ body {
 .navigation-list {
   display: flex;
 }
-.contacts-list {
-  display: flex;
-  margin-left: auto;
-  column-gap: 50px;
-}
+
 
 .studio-logo {
   margin-right: 93px;
@@ -129,7 +125,7 @@ body {
   color: var(--elements-color);
 }
 .navigation-list {
-   align-items: center;
+  align-items: center;
   column-gap: 50px;
 }
 .navigation-link,
@@ -145,33 +141,28 @@ body {
 .navigation-link:focus {
   color: var(--accent-color);
 }
-
-.contacts-list-item {
-  color: var(--text-color);
-}
-
-.icon-mail {
-  width: 16px;
-  height: 12px;
-  color: var(--text-color);
-  margin-right: 10px;
-}
-.icon-mail:hover {
-  fill: var(--accent-color);
-}
+.contacts-list {
+  display: flex;
+  align-items: base-line;
+   margin-left: auto;
+  column-gap: 30px;
+  fill: var(--text-color);
+ }
+.icon-mail,
 .icon-mob {
-  width: 10px;
-  height: 16px;
-  color: var(--text-color);
   margin-right: 10px;
+   }
+.contacts-list-item {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+ 
 }
-.icon-mob:hover {
-  fill: var(--accent-color);
-}
-
 .contacts-list-item:hover,
-.contacts-list-item:focus {
+.contacts-list-item:focus .icon-mail,
+.contacts-list-item:focus .icon-mob {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /*hero style*/
@@ -234,59 +225,26 @@ body {
   display: flex;
   min-width: 270px;
   height: 120px;
-    background: #F5F4FA;
+  background: #f5f4fa;
   border-radius: 4px;
   border: none;
   margin-bottom: 30px;
 }
 .feature-antenna {
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .feature-clock,
 .feature-diagram,
 .feature-astronaut {
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
- 
+
 .feartures-title-item {
   max-width: 270px;
 }
-/*
-.icon-antenna {
-  height: 120px;
-  background: #f5f4fa;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-*/
-/*
-.feartures-title-item::before {
-  display: flex;
-  content: '';
-  
-  background-size: 70px 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 120px;
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-.icon-antenna::before {
-  background-image: url(../images/our_features_icons/antenna\ 1.svg);
-}
-.icon-clock::before {
-  background-image: url(../images/our_features_icons/clock\ 1.svg);
-}
-.icon-diagram::before {
-  background-image: url(../images/our_features_icons/diagram\ 1.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../images/our_features_icons/astronaut\ 1.svg);
-}
-*/
+
 .feartures-title-name {
   font-weight: 700;
   font-size: 14px;
@@ -354,6 +312,7 @@ justify-content: center;
 .social-media-item {
   width: 20px;
   height: 20px;
+  fill: currentColor;
 }
 .social-media-list {
   display: flex;
@@ -367,50 +326,52 @@ justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  backfround-color: #ffffff;
-  fill: #afb1b8;
+  color: #afb1b8;
 }
 .social-media-link:hover,
 .social-media-link:focus {
   background-color: var(--accent-color);
+  color: var(--elements-color)
 }
-.social-media-link:hover .social-media-item,
-.social-media-link:focus .social-media-item {
-  fill: #ffffff;
-}
+
 
 /*--clients--*/
 .all-clients {
-  margin-bottom: 50px;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.17;
+text-align: center;
+letter-spacing: 0.03em;
+margin-bottom: 50px;
 }
 .clients {
   display: flex;
-  width: 170px;
-  height: 92px;
   column-gap: 30px;
 }
 .client-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
-  border: #afb1b8 solid 2px;
+  border: #afb1b8 solid 1px;
+  color: #afb1b8;
   border-radius: 4px;
 }
 
 .logo-client {
   width: 106px;
   height: 60px;
-  margin: 16px 32px;
-  fill: #afb1b8;
+   fill: currentColor;
 }
 .client-link:hover .logo-client,
 .client-link:focus .logo-client {
   fill: var(--accent-color);
 }
 
-.client-list:hover .client-link,
-.client-list:focus .client-link {
-  border: var(--accent-color) solid 2px;
+.client-link:hover,
+.client-link:focus {
+  border: var(--accent-color) solid 1px;
 }
 
 /*footer*/
@@ -419,10 +380,12 @@ justify-content: center;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  padding-top: 12px;
   color: #ffffff;
   padding-bottom: 20px;
-  }
+}
+.container-for-adress {
+  margin-right: 70px;
+}
 .footer-page {
   background-color: #2f303a;
   padding-top: 60px;
@@ -465,45 +428,39 @@ justify-content: center;
 
 .footer {
   display: flex;
-  column-gap: 70px;
+  align-items: baseline;
 }
-.container-for-social {
-display: block;
-min-width: 206px;
-height: 80px;
-padding-top: 0px;
-padding-bottom: 100px;
-}
+
 
 .social-media-footer {
   display: flex;
   justify-content: center;
+  
   column-gap: 10px;
 }
+
 .social-media-footer-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
+    width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: #ffffff10;
-  
 }
 
 .social-media-footer-link:hover,
-.social-media-footer-link:focus  {
+.social-media-footer-link:focus {
   background-color: var(--accent-color);
 }
 .social-media-item-footer {
   display: block;
-  width:20px;
+  width: 20px;
   height: 20px;
-  margin: 12px:
-  
+  margin: 12px;
 }
 .footer-link {
-fill: #ffffff;
+  fill: #ffffff;
 }
 /*Portfolio_blank*/
 /*buttons*/
@@ -530,6 +487,8 @@ fill: #ffffff;
 .portfolio-button-style:focus {
   background-color: var(--backfround-active-button);
   color: var(--elements-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+border-radius: 4px;
 }
 /*list*/
 .photo-list {
@@ -558,9 +517,9 @@ fill: #ffffff;
 }
 .our-works-link {
   display: block;
-  }
-  .our-works-link:hover,
-  .our-work-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  }
-
+}
+.our-works-link:hover,
+.our-work-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
