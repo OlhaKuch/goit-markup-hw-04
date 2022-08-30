@@ -151,6 +151,7 @@ body {
 .icon-mail,
 .icon-mob {
   margin-right: 10px;
+  fill: currentColor;
    }
 .contacts-list-item {
   display: flex;
@@ -162,8 +163,7 @@ body {
 .contacts-list-item:focus .icon-mail,
 .contacts-list-item:focus .icon-mob {
   color: var(--accent-color);
-  fill: var(--accent-color);
-}
+ }
 
 /*hero style*/
 .service-order {
@@ -366,7 +366,7 @@ margin-bottom: 50px;
 }
 .client-link:hover .logo-client,
 .client-link:focus .logo-client {
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .client-link:hover,
@@ -435,8 +435,7 @@ margin-bottom: 50px;
 .social-media-footer {
   display: flex;
   justify-content: center;
-  
-  column-gap: 10px;
+   column-gap: 10px;
 }
 
 .social-media-footer-link {
@@ -519,7 +518,7 @@ border-radius: 4px;
   display: block;
 }
 .our-works-link:hover,
-.our-work-link:focus {
+.our-works-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
